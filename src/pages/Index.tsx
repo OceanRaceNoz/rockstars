@@ -1,4 +1,3 @@
-
 import React from "react";
 import StatusBar from "@/components/home/StatusBar";
 import ProfilesScroll from "@/components/home/ProfilesScroll";
@@ -10,12 +9,12 @@ import NavigationBar from "@/components/home/NavigationBar";
 
 const Index: React.FC = () => {
   return (
-    <div className="bg-white flex max-w-[480px] w-full flex-col overflow-hidden items-stretch mx-auto min-h-screen">
+    <div className="bg-white flex max-w-[480px] w-full flex-col overflow-hidden items-stretch mx-auto">
       <StatusBar />
 
       <ProfilesScroll />
 
-      <div className="bg-[#F1EBF3] w-full py-8">
+      <div className="bg-[#F1EBF3] w-full pr-5 py-8">
         <FeaturedAuthor
           name="Malte Goltsche"
           title="Stimme für den VfL Osnabrück"

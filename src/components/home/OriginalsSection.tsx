@@ -1,4 +1,3 @@
-
 import React from "react";
 
 interface SectionHeaderProps {
@@ -13,14 +12,14 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
   onActionClick,
 }) => {
   return (
-    <div className="flex w-full max-w-full flex-col items-stretch justify-center px-5">
-      <div className="flex w-full items-center justify-between">
-        <div className="text-[#343333] text-xl font-medium leading-none">
+    <div className="flex w-full max-w-[358px] flex-col items-stretch justify-center pl-5">
+      <div className="flex w-full items-center gap-[40px_100px] justify-between">
+        <div className="text-[#343333] text-xl font-medium leading-none self-stretch my-auto">
           {title}
         </div>
         <div
           onClick={onActionClick}
-          className="text-[rgba(0,56,108,1)] text-xs font-normal leading-[25px] cursor-pointer"
+          className="text-[rgba(0,56,108,1)] text-xs font-normal leading-[25px] self-stretch my-auto cursor-pointer"
         >
           {actionText}
         </div>
@@ -35,19 +34,17 @@ const OriginalsSection: React.FC = () => {
   };
 
   return (
-    <div className="mt-[50px] w-full">
+    <div className="mt-[50px]">
       <SectionHeader
         title="Originals"
         actionText="Alle anzeigen"
         onActionClick={handleViewAll}
       />
-      <div className="w-full px-5 mt-[15px]">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/1ad3054b3ce94f0daeab7f24b1d94f43/70889862130d3d09c5766962a7bd6e9dca6a1db2d9cd701c3b89ae80c31bcb68?placeholderIfAbsent=true"
-          alt="Originals content"
-          className="w-full object-contain"
-        />
-      </div>
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/1ad3054b3ce94f0daeab7f24b1d94f43/70889862130d3d09c5766962a7bd6e9dca6a1db2d9cd701c3b89ae80c31bcb68?placeholderIfAbsent=true"
+        alt="Originals content"
+        className="aspect-[0.65] object-contain w-full mt-[15px]"
+      />
     </div>
   );
 };
