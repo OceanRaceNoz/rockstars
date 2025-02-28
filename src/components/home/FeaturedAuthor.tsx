@@ -1,3 +1,4 @@
+
 import React from "react";
 
 interface FeaturedAuthorProps {
@@ -16,14 +17,14 @@ const FeaturedAuthor: React.FC<FeaturedAuthorProps> = ({
   buttonText,
 }) => {
   return (
-    <div className="shadow-[-38px_64px_21px_0px_rgba(0,0,0,0.00),-25px_41px_19px_0px_rgba(0,0,0,0.01),-14px_23px_16px_0px_rgba(0,0,0,0.05),-6px_10px_12px_0px_rgba(0,0,0,0.09),-2px_3px_7px_0px_rgba(0,0,0,0.10)] bg-[linear-gradient(95deg,#A560D6_-8.15%,#4D1973_111.61%)] w-full ml-5 pt-[13px] pb-6 px-3.5 rounded-[10px]">
-      <div className="flex items-center gap-[13px]">
+    <div className="shadow-[-38px_64px_21px_0px_rgba(0,0,0,0.00),-25px_41px_19px_0px_rgba(0,0,0,0.01),-14px_23px_16px_0px_rgba(0,0,0,0.05),-6px_10px_12px_0px_rgba(0,0,0,0.09),-2px_3px_7px_0px_rgba(0,0,0,0.10)] bg-[linear-gradient(95deg,#A560D6_-8.15%,#4D1973_111.61%)] w-full ml-5 mr-5 max-w-[calc(100%-40px)] pt-[13px] pb-6 px-3.5 rounded-[10px]">
+      <div className="flex flex-wrap md:flex-nowrap items-center gap-[13px]">
         <img
           src={imageUrl}
           alt={name}
-          className="aspect-[0.97] object-contain w-[120px] self-stretch shrink-0 my-auto rounded-[76px]"
+          className="aspect-[0.97] object-contain w-[120px] max-w-[120px] rounded-[76px]"
         />
-        <div className="self-stretch flex flex-col items-stretch w-[175px] my-auto">
+        <div className="flex flex-col items-stretch flex-1 min-w-[175px]">
           <div className="w-full">
             <div className="w-full">
               <div className="text-[#CBBAD6] text-xs font-semibold">
@@ -37,7 +38,7 @@ const FeaturedAuthor: React.FC<FeaturedAuthorProps> = ({
               </div>
             </div>
           </div>
-          <div className="items-center bg-[rgba(250,250,250,0.90)] flex gap-[5px] text-xs text-[rgba(112,32,140,1)] font-medium leading-none mt-[15px] px-2.5 py-[5px] rounded-[3px]">
+          <div className="items-center bg-[rgba(250,250,250,0.90)] flex gap-[5px] text-xs text-[rgba(112,32,140,1)] font-medium leading-none mt-[15px] px-2.5 py-[5px] rounded-[3px] w-fit">
             <div className="self-stretch my-auto">{buttonText}</div>
             <img
               src="https://cdn.builder.io/api/v1/image/assets/1ad3054b3ce94f0daeab7f24b1d94f43/ff9a507c4f651bd78af83dea4e1ab35598cf135a55337f47bb94ad7c697fc943?placeholderIfAbsent=true"

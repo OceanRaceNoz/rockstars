@@ -1,3 +1,4 @@
+
 import React from "react";
 import PodcastCard from "./PodcastCard";
 
@@ -37,7 +38,7 @@ const podcastData = [
 
 const PodcastsScroll: React.FC = () => {
   return (
-    <div className="overflow-x-auto flex items-center gap-3.5 mt-6 pl-5">
+    <div className="overflow-x-auto flex items-center gap-3.5 mt-6 pl-5 pb-2">
       {podcastData.map((podcast) => (
         <PodcastCard
           key={podcast.id}
